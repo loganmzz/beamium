@@ -10,6 +10,7 @@ RUN apt-get update \
         && apt-get update \
         && apt-get install -y beamium \
         && rm -rf /var/lib/apt/lists/*
+        && chown -R beamium:beamium /etc/beamium/
 USER 1000
 ADD entrypoint.sh /
 
